@@ -12,15 +12,13 @@ function App() {
     <>
     <div className='layout'>
     <BrowserRouter>
-    <Navbar />
-        
+      <Navbar />
           <Routes>
             <Route exact path="/" element={<Home/>}/>
             <Route path="/About" element={<About/>} /> 
             <Route path="/Tjenester" element={<Tjenester/>}/>
           </Routes>
-        
-      <Footer /> 
+        <Footer /> 
       </BrowserRouter>
     </div>
     </>

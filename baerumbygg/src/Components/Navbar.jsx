@@ -6,7 +6,6 @@ import logo from "../Assets/logo.png"
 
 const Navbar = () => {
 const [isOpen, setisOpen] = useState(false)
-const [isActive, setIsActive] = useState(false)
 console.log(isOpen)
 return ( 
     <>
@@ -30,9 +29,15 @@ return (
                                     <NavLink to="/" onClick={() => setisOpen(!isOpen)} className="nav-link">Hjem</NavLink>
                                     <NavLink to="/about" onClick={() => setisOpen(!isOpen)} className="nav-link">Om oss</NavLink>
                                     <NavLink to="/tjenester" onClick={() => setisOpen(!isOpen)} className="nav-link">Tjenester</NavLink>
-
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div className="desktop-nav">
+                        <div className="links">
+                            <NavLink to="/" className="nav-link">Hjem</NavLink>
+                            <NavLink to="/about" className="nav-link">Om oss</NavLink>
+                            <NavLink to="/tjenester" className="nav-link">Tjenester</NavLink>
                         </div>
                     </div>
                 </div>
