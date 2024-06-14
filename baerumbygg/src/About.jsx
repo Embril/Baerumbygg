@@ -1,8 +1,11 @@
 import React from "react";
+import Banner from "./Components/Banner";
 
 const About = () => {
     return ( 
-        <div>Dette er om siden</div>
+        <div>
+            <Banner />
+        </div>
     )
 }
 export default About
