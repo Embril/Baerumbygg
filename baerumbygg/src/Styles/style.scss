@@ -68,7 +68,6 @@
                     }
                     .links {
                         background-color: rgb(49, 49, 49);
-                        position: absolute;
                         right: 0px;
                         top: 0px;
                         height: 100%;
@@ -96,6 +95,17 @@
                                     text-decoration: underline;
                                     transition: 0.3s ease-in-out;
                                 }
+                            }
+                            .active {
+                                color: white;
+                                display: flex;
+                                flex-flow: row;
+                                justify-content: center;
+                                font-size:xx-large;
+                                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                                text-decoration: none;
+                                color: rgb(224, 156, 107);
+                                text-decoration: underline;
                             }
                         }
                     }
@@ -166,6 +176,15 @@
                                     transition: 0.3s ease-in-out;
                                 }
                             }
+                            .active {
+                                color: white;
+                                text-decoration: none;
+                                font-size: large;
+                                font-weight: bold;
+                                z-index: 1;
+                                color: rgb(224, 156, 107);
+                                text-decoration: underline;
+                            }
                         }
                     }
                 }
@@ -184,6 +203,20 @@
                         font-size: large;
                         font-weight: bold;
                         z-index: 1;
+                        &:hover {
+                            color: rgb(224, 156, 107);
+                            text-decoration: underline;
+                            transition: 0.3s ease-in-out;
+                        }
+                    }
+                    .active {
+                        color: white;
+                        text-decoration: none;
+                        font-size: large;
+                        font-weight: bold;
+                        z-index: 1;
+                        color: rgb(224, 156, 107);
+                        text-decoration: underline;
                     }
                 }
             }
@@ -240,6 +273,10 @@
     }
  }
 
+ .banner-header-tekst {
+    color: black;
+ }
+
  //HOME
 
  .page-container {
@@ -247,3 +284,6 @@
     justify-content: center;
     flex-flow: center;
  }
+
+
+

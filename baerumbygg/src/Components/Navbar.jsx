@@ -6,7 +6,7 @@ import logo from "../Assets/logo.png"
 
 const Navbar = () => {
 const [isOpen, setisOpen] = useState(false)
-console.log(isOpen)
+
 return ( 
     <>
         <div className="navbar-container">
@@ -26,18 +26,18 @@ return (
                             </div>
                             <div className="links">
                                 <div className="inner-mobile-nav-container">
-                                    <NavLink to="/" onClick={() => setisOpen(!isOpen)} className="nav-link">Hjem</NavLink>
-                                    <NavLink to="/about" onClick={() => setisOpen(!isOpen)} className="nav-link">Om oss</NavLink>
-                                    <NavLink to="/tjenester" onClick={() => setisOpen(!isOpen)} className="nav-link">Tjenester</NavLink>
+                                    <NavLink to="/" onClick={() => setisOpen(!isOpen)} className={({ isActive }) => (isActive ? 'active' : 'nav-link')}>Hjem</NavLink>
+                                    <NavLink to="/about" onClick={() => setisOpen(!isOpen)} className={({ isActive }) => (isActive ? 'active' : 'nav-link')}>Om oss</NavLink>
+                                    <NavLink to="/tjenester" onClick={() => setisOpen(!isOpen)} className={({ isActive }) => (isActive ? 'active' : 'nav-link')}>Tjenester</NavLink>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="desktop-nav">
                         <div className="links">
-                            <NavLink to="/" className="nav-link">Hjem</NavLink>
-                            <NavLink to="/about" className="nav-link">Om oss</NavLink>
-                            <NavLink to="/tjenester" className="nav-link">Tjenester</NavLink>
+                            <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : 'nav-link')}>Hjem</NavLink>
+                            <NavLink to="/about" className={({ isActive }) => (isActive ? 'active' : 'nav-link')}>Om oss</NavLink>
+                            <NavLink to="/tjenester" className={({ isActive }) => (isActive ? 'active' : 'nav-link')}>Tjenester</NavLink>
                         </div>
                     </div>
                 </div>
