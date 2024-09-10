@@ -1,18 +1,39 @@
 import React, { useState } from "react";
 import '../Styles/style';
 import { NavLink } from "react-router-dom";
-import logo from "../Assets/logo.png"
+import logo from "../Assets/logo.png";
+import { useEffect } from "react";
 
 
 const Navbar = () => {
 const [isOpen, setisOpen] = useState(false)
+const [scrolled, setScrolled] = useState(false);
+
+useEffect(() => {
+    const handleScroll = () => {
+        const offset = window.scrollY;
+        if (offset > 300) {
+            setScrolled(true);
+        } else {
+            setScrolled(false);
+        }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+        window.removeEventListener("scroll", handleScroll);
+    };
+}, []);
 
 return ( 
     <>
-        <div className="navbar-container">
+        <div className={`navbar-container ${scrolled ? 'scrolled' : ''}`}>
             <div className="navbar-inner-container">
                 <div className="logo-container">
-                    <img className="logo" src={logo} alt="Logo" />
+                    <NavLink className="logo-container" to="/">
+                        <img className="logo" src={logo} alt="Logo" />
+                    </NavLink>
                 </div>
                 <div className="menu-elements">
                     <div className="mobile-nav">
